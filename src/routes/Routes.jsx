@@ -12,9 +12,9 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/auth/login" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/auth/login" replace />} />
       </Routes>
     </Router>
   );

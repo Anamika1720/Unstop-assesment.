@@ -9,7 +9,7 @@ const HomePage = () => {
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (!storedUser) {
-      navigate("/");
+      navigate("/auth/login");
     } else {
       setUser(JSON.parse(storedUser));
     }
@@ -17,7 +17,7 @@ const HomePage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
-    navigate("/");
+    navigate("auth/login/");
   };
 
   if (!user) return null;
