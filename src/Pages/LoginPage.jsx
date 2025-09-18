@@ -71,8 +71,8 @@ const LoginPage = () => {
       <div className="w-full md:w-1/2 flex justify-center p-4 md:order-2 order-1">
         <div className="w-full max-w-md border border-gray-200 rounded-lg shadow-md p-6 sm:p-8">
           {/* Heading */}
-          <h1 className="text-2xl font-semibold text-center">
-            Welcome to <p className="text-purple-600">Unstop</p>
+          <h1 className="text-4xl text-left font-bold">
+            Welcome to <p className="text-[#6358DC]">Unstop</p>
           </h1>
 
           {/* Social Login */}
@@ -121,13 +121,10 @@ const LoginPage = () => {
           {/* Options */}
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600 mt-4 gap-2">
             <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                className="form-checkbox text-purple-600"
-              />
+              <input type="checkbox" className="form-checkbox text-[#6358DC]" />
               <span>Remember me</span>
             </label>
-            <div className="text-purple-600  cursor-pointer">
+            <div className="text-[#6358DC]  cursor-pointer">
               Forgot Password?
             </div>
           </div>
@@ -135,15 +132,15 @@ const LoginPage = () => {
           {/* Login Button */}
           <button
             onClick={handleLogin}
-            className="w-full mt-6 bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition cursor-pointer"
+            className="w-full mt-6 bg-[#6358DC] text-white py-2 rounded-xl cursor-pointer"
           >
             Login
           </button>
 
           {/* Register Link */}
-          <p className="text-center text-sm text-gray-600 mt-4">
+          <p className="text-center text-sm  mt-4">
             Don’t have an account?
-            <span className="text-purple-600 font-medium  cursor-pointer">
+            <span className="text-[#6358DC] font-medium  cursor-pointer">
               Register
             </span>
           </p>

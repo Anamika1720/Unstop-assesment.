@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ProfileImage from "../SvgImages/ProfileImage";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -22,36 +23,36 @@ const HomePage = () => {
   if (!user) return null;
 
   return (
-    <div className="flex flex-col items-center justify-center h-[538px] bg-gray-50 px-4 py-4">
-      {/* Heading */}
-      <div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">
-          Welcome to <p className="text-purple-600">Unstop</p>
-        </h1>
-      </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-[267px] h-[538px] flex flex-col items-center justify-between gap-[113px] bg-gray-50 p-4">
+        {/* Heading */}
+        <div>
+          <h1 className="text-4xl font-bold mb-6">
+            Welcome to <p className="text-[#6358DC]">Unstop</p>
+          </h1>
+        </div>
 
-      {/* Card */}
-      <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 w-full max-w-xs sm:max-w-sm md:max-w-md flex flex-col items-center text-center gap-4">
-        <img
-          src={user.image}
-          alt={user.firstName}
-          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full"
-        />
-        <h2 className="text-lg sm:text-xl font-semibold text-gray-800">
-          {user.firstName} {user.lastName}
-        </h2>
-        <p className="text-gray-600 text-sm sm:text-base">{user.email}</p>
-        <p className="text-gray-600 text-sm sm:text-base capitalize">
-          {user.gender}
-        </p>
+        {/* Card */}
+        <div className="  w-[267px] h-[311px] rounded-[20px] border border-gray-200 p-5 flex flex-col items-center text-center gap-5 bg-white">
+          <ProfileImage />
+          <div>
+            <h2 className="text-base font-semibold text-[#6358DC]">
+              {user.firstName} {user.lastName}
+            </h2>
+            <div className="text-[12px] p-2">
+              <p className="m-1">{user.email}</p>
+              <p className="capitalize">{user.gender}</p>
+            </div>
+          </div>
 
-        {/* Logout */}
-        <button
-          onClick={handleLogout}
-          className="mt-4 sm:mt-6 bg-purple-500 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-xl hover:bg-purple-600 transition w-full sm:w-auto cursor-pointer"
-        >
-          Logout
-        </button>
+          {/* Logout */}
+          <button
+            onClick={handleLogout}
+            className=" w-[137px] h-[48px] bg-[#6358DC] text-white rounded-[16px] flex items-center justify-center gap-[10px] cursor-pointer"
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </div>
   );
