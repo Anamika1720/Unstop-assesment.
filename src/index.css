@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #6358DC;
+  --surface: #ffffff;
+  --surface-2: #f3f3f5;
+  /* page background from mock */
+  --input-bg: #f5f6f8;
+  /* slightly darker input fill */
+  --input-border: #dfe3e8;
+  /* slightly darker border */
+  --muted: #6b7280;
+  /* gray-500 */
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: #1c1b1f;
+  /* Avoid horizontal scrollbar on common desktop widths */
+  overflow-x: hidden;
+}
